@@ -9,9 +9,12 @@ Displaying GPS data from an Adafruit Ultimate GPS Breakout V3 to the pi-top[4]
 * (Adafruit Ultimate GPS Breakout v3)[https://thepihut.com/products/adafruit-ultimate-gps-breakout-66-channel-w-10-hz-updates]
 * Some jumper wires
 
-Please note that this will worth with other GPS devices, however, not all NMEA sentences may be available. by default the Adafruit Ultimate GPS Breakout v3 does not show GPZDA by default, which is dame and date sentence but can be enabled with doing a serial write
+Please note that this will work with other GPS devices, however, not all NMEA sentences may be available. by default the Adafruit Ultimate GPS Breakout v3 does not show GPZDA by default, which is dame and date sentence but can be enabled with doing a serial write
 
 ## Software 
 * `pip3 install pySerial `
 *  `sudo apt install libatlas-base-dev -y` (if using virtualenv)
 
+## Usefull links
+* [MTK NMEA Packet User Manual](https://www.sparkfun.com/datasheets/GPS/Modules/PMTK_Protocol.pdf) - perfect to learn how to configure the GPS device
+* [GPS - NMEA sentence information](http://aprs.gids.nl/nmea/) - perfect to learn what the NMEA sentence data actually is
