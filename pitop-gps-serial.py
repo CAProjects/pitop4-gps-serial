@@ -1,12 +1,10 @@
-#!/usr/bin/python3
-
 import io
 import serial
 from pitop.miniscreen import Miniscreen
 from PIL import Image, ImageDraw, ImageFont
 
 # Serial setup
-serialConf = serial.Serial('/dev/ttyAMA0', 9600, timeout=0.5)
+serialConf = serial.Serial('/dev/ttyAMA0', 9600, timeout=0.3)
 serialio = io.TextIOWrapper(io.BufferedRWPair(serialConf, serialConf))
 
 # Enable only NMEA sentences required
@@ -103,3 +101,6 @@ while 1:
     # and is away of ignoring it
     except UnicodeDecodeError as e:
         continue
+    except KeyboardInterrupt:
+        ms.clear()
+        exit()
